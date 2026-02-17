@@ -1,4 +1,9 @@
 
+const activeClass = "bg-[#4f39f6] text-white";
+const inactiveClass = "btn-neutral btn-outline border-gray-200";
+
+
+
 const handleActive = (clickedElement, sectionId) => {
     // 1. Find all buttons with the 'nav-link' class
     const allLinks = document.querySelectorAll('.nav-link');
@@ -182,7 +187,7 @@ const displayProducts = (products) => {
                 </div>
 
                 <div class="flex justify-between px-3 pb-4 gap-3">
-                    <button class="flex-1 border border-gray-200 rounded-md py-2">
+                    <button onclick="openProductModal(${product.id})" class="btn flex-1 border border-gray-200 rounded-md py-2">
                         Details
                     </button>
                     <button class="flex-1 bg-[#4f39f6] text-white rounded-md py-2">
@@ -196,9 +201,49 @@ const displayProducts = (products) => {
 };
 
 
+// DaisyUI Modal Setup
+
+const openProductModal = async (id) => {
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const product = await res.json();
+
+    const content = document.getElementById("modal-content");
+
+    content.innerHTML = `
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <img src="${product.image}" 
+                     class="w-full h-64 object-contain" />
+            </div>
+
+            <div class="space-y-3">
+                <h2 class="text-2xl font-bold">${product.title}</h2>
+
+                <p class="text-gray-600 text-sm">
+                    ${product.description}
+                </p>
+
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl font-bold">
+                        $${product.price}
+                    </span>
+                    <span>
+                        ⭐ ${product.rating.rate} (${product.rating.count})
+                    </span>
+                </div>
+
+                <button class="btn bg-[#4f39f6] text-white w-full">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById('product_modal').showModal();
+};
+
+
 loadCategories();
 ourProducts();
 
 
-const activeClass = "bg-[#4f39f6] text-white";
-const inactiveClass = "btn-neutral btn-outline border-gray-200";
