@@ -37,20 +37,21 @@
                 <h2 class="text-xl font-semibold text-[#4f39f6]">SwiftCart</h2>
             </div>
             <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 text-base">
-                    <li><button
-                            class="btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">Home</button>
+                <ul class="menu menu-horizontal px-2 text-base">
+                    <li><button onclick="handleActive(this, '#hero-section')"
+                            class="nav-link btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">Home</button>
                     </li>
-                    <li><button
-                            class="btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">Products</button>
+                    <li><button onclick="handleActive(this, '#products')"
+                            class="nav-link btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">Products</button>
                     </li>
-                    <li><button
-                            class="btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">About</button>
+                    <li><button onclick="handleActive(this, '#why-choose-us')"
+                            class="nav-link btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">About</button>
                     </li>
-                    <li><button
-                            class="btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">Contact</button>
+                    <li><button onclick="handleActive(this, '#footer')"
+                            class="nav-link btn btn-ghost text-gray-500 font-medium text-base hover:bg-[#4f39f6] hover:text-white">Contact</button>
                     </li>
                 </ul>
+
             </div>
             <div class="navbar-end">
                 <div class="">
@@ -61,11 +62,17 @@
                             <i class="fa-solid fa-bars text-xl"></i>
                         </div>
                         <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2">
-                            <li>
-                                <a>Home</a>
-                                <a>Products</a>
-                                <a>About</a>
-                                <a>Contact</a>
+                            <li><button onclick="handleActive(this, '#hero-section')"
+                                    class="nav-link btn btn-ghost text-gray-500 font-medium text-sm hover:bg-[#4f39f6] hover:text-white">Home</button>
+                            </li>
+                            <li><button onclick="handleActive(this, '#products')"
+                                    class="nav-link btn btn-ghost text-gray-500 font-medium text-sm hover:bg-[#4f39f6] hover:text-white">Products</button>
+                            </li>
+                            <li><button onclick="handleActive(this, '#why-choose-us')"
+                                    class="nav-link btn btn-ghost text-gray-500 font-medium text-sm hover:bg-[#4f39f6] hover:text-white">About</button>
+                            </li>
+                            <li><button onclick="handleActive(this, '#footer')"
+                                    class="nav-link btn btn-ghost text-gray-500 font-medium text-sm hover:bg-[#4f39f6] hover:text-white">Contact</button>
                             </li>
                         </ul>
                     </div>
@@ -77,7 +84,7 @@
 
 
     <!-- Secction:01 | Hero Section -->
-    <section class="h-[600px] bg-[url('./assets/banner-image.png')] bg-cover bg-center">
+    <section id="hero-section" class="h-[600px] bg-[url('./assets/banner-image.png')] bg-cover bg-center">
         <div class="hero-overlay bg-gradient-to-r from-black to-transparent grid place-items-center gap-4">
             <div class="w-11/12 md:w-10/12">
                 <h2 class="text-4xl text-white font-bold mb-6">Best Collection For You</h2>
@@ -85,7 +92,8 @@
                     Discover the latest trends in fashion, electronics, and more. Shop with confidence and style at
                     SwiftCart.
                 </p>
-                <button class="btn btn-primary bg-[#4f39f6] hover:bg-blue-800">Shop Now</button>
+                <button onclick="location.href='#trending'" class="btn btn-primary bg-[#4f39f6] hover:bg-blue-800">Shop
+                    Now</button>
             </div>
         </div>
     </section>
@@ -93,7 +101,7 @@
 
 
     <!-- Section: 02 | Why Choose Us -->
-    <section class="bg-[#f9fcfa] py-10 md:py-10">
+    <section id="why-choose-us" class="bg-[#f9fcfa] py-10 md:py-10">
         <div class="w-11/12 md:w-10/12 mx-auto">
             <div class="mb-7">
                 <h2 class="text-4xl font-bold text-center space mb-3">Why Choose Us</h2>
@@ -170,7 +178,7 @@
 
 
     <!-- Section: 03 | Trending Now -->
-    <section class="bg-white py-10 md:py-20">
+    <section id="trending" class="bg-white py-10 md:py-20">
 
         <div class="w-11/12 md:w-10/12 mx-auto">
             <div class="mb-7">
@@ -178,6 +186,11 @@
             </div>
 
             <!-- Templete for Dynamic Data Load through API -->
+            <div id="trending-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            </div>
+
+            <!--  
             <div class="trending-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="card border rounded-lg border-gray-100 gap-7">
                     <div class="image p-2 bg-[#e4e6ea] rounded-t-lg"><img class="h-96 mx-auto"
@@ -249,16 +262,48 @@
                     </div>
                 </div>
             </div>
-
+-->
 
 
         </div>
     </section>
 
 
+    <!-- Section: 04 | Our Products -->
+    <section id="products" class="bg-[#f9fcfa] py-10 md:py-10">
+        <div class="w-11/12 md:w-10/12 mx-auto">
+            <div class="mb-7">
+                <h2 class="text-4xl font-bold text-center mb-3">Our Products</h2>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                <button class="btn btn-neutral btn-outline border-gray-200 rounded-full hover:bg-[#4f39f6]">All</button>
+                <button
+                    class="btn btn-neutral btn-outline border-gray-200 rounded-full hover:bg-[#4f39f6]">Electronics</button>
+                <button
+                    class="btn btn-neutral btn-outline border-gray-200 rounded-full hover:bg-[#4f39f6]">Jewelery</button>
+                <button class="btn btn-neutral btn-outline border-gray-200 rounded-full hover:bg-[#4f39f6]">Men's
+                    Clothing</button>
+                <button class="btn btn-neutral btn-outline border-gray-200 rounded-full hover:bg-[#4f39f6]">Women's
+                    Clothing</button>
+            </div>
+
+            <div class="mt-8">
+                <div id="product-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+                </div>
+
+            </div>
+        </div>
+
+        </div>
+
+
+    </section>
+
 
     <!-- Footer | Newsletter & Footer -->
-    <footer class="bg-[#1d2838]">
+    <footer id="footer" class="bg-[#1d2838]">
 
         <div class="w-10/12 mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10">
@@ -342,7 +387,7 @@
 
 
 
-
+    <script src="./script/index.js"></script>
 </body>
 
 </html>
