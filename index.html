@@ -30,7 +30,7 @@
 
 <body>
 
-    <!-- Navbar from DaisyUI Code -->
+    <!-- Header / Navbar from DaisyUI Code -->
     <header class="shadow-sm">
         <div class="flex w-11/12 md:w-10/12 mx-auto">
             <div class="navbar-start bg-base-100 mx-auto">
@@ -74,6 +74,8 @@
         </div>
     </header>
 
+
+
     <!-- Secction:01 | Hero Section -->
     <section class="h-[600px] bg-[url('./assets/banner-image.png')] bg-cover bg-center">
         <div class="hero-overlay bg-gradient-to-r from-black to-transparent grid place-items-center gap-4">
@@ -88,8 +90,10 @@
         </div>
     </section>
 
+
+
     <!-- Section: 02 | Why Choose Us -->
-    <section class="bg-[#f9fcfa] py-10 md:py-20">
+    <section class="bg-[#f9fcfa] py-10 md:py-10">
         <div class="w-11/12 md:w-10/12 mx-auto">
             <div class="mb-7">
                 <h2 class="text-4xl font-bold text-center space mb-3">Why Choose Us</h2>
@@ -163,6 +167,181 @@
         </div>
 
     </section>
+
+
+    <!-- Section: 03 | Trending Now -->
+    <section class="bg-white py-10 md:py-20">
+
+        <div class="w-11/12 md:w-10/12 mx-auto">
+            <div class="mb-7">
+                <h2 class="text-4xl font-bold space mb-3">Trending Now</h2>
+            </div>
+
+            <!-- Templete for Dynamic Data Load through API -->
+            <div class="trending-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card border rounded-lg border-gray-100 gap-7">
+                    <div class="image p-2 bg-[#e4e6ea] rounded-t-lg"><img class="h-96 mx-auto"
+                            src="./assets/trending1.png" alt="">
+                    </div>
+                    <div class="categoy-rank flex justify-between items-center px-3">
+                        <button class="rounded-full text-sm bg-[#4f39f620] px-3 py-1">Men's Clothing</button>
+                        <div class="flex gap-1">
+                            <p><span>* 3.9</span></p>
+                            <p>(120)</p>
+                        </div>
+                    </div>
+                    <div class="title-price px-3">
+                        <h2 class="text-base text-wrap">Mens Casual Premium Slim Fit T-Shirts</h2>
+                        <h2 class="text-xl font-bold">Price</h2>
+                    </div>
+                    <div class="details-add flex justify-between px-3 pb-4 gap-3">
+                        <button class="flex-1 border border-gray-200 font-medium rounded-md py-2"><i
+                                class="fa-solid fa-eye mx-2"></i>Details</button>
+                        <button
+                            class="flex-1 border border-gray-200 bg-[#4f39f6] text-white font-medium rounded-md py-2"><i
+                                class="fa-solid fa-cart-shopping mx-2"></i>Add</button>
+                    </div>
+                </div>
+                <div class="card border rounded-lg border-gray-100 gap-7">
+                    <div class="image p-2 bg-[#e4e6ea] rounded-t-lg"><img class="h-96 mx-auto"
+                            src="./assets/trending1.png" alt="">
+                    </div>
+                    <div class="categoy-rank flex justify-between items-center px-3">
+                        <button class="rounded-full text-sm bg-[#4f39f620] px-3 py-1">Men's Clothing</button>
+                        <div class="flex gap-1">
+                            <p><span>* 3.9</span></p>
+                            <p>(120)</p>
+                        </div>
+                    </div>
+                    <div class="title-price px-3">
+                        <h2 class="text-base text-wrap">Mens Casual Premium Slim Fit T-Shirts</h2>
+                        <h2 class="text-xl font-bold">Price</h2>
+                    </div>
+                    <div class="details-add flex justify-between px-3 pb-4 gap-3">
+                        <button class="flex-1 border border-gray-200 font-medium rounded-md py-2"><i
+                                class="fa-solid fa-eye mx-2"></i>Details</button>
+                        <button
+                            class="flex-1 border border-gray-200 bg-[#4f39f6] text-white font-medium rounded-md py-2"><i
+                                class="fa-solid fa-cart-shopping mx-2"></i>Add</button>
+                    </div>
+                </div>
+                <div class="card border rounded-lg border-gray-100 gap-7">
+                    <div class="image p-2 bg-[#e4e6ea] rounded-t-lg"><img class="h-96 mx-auto"
+                            src="./assets/trending1.png" alt="">
+                    </div>
+                    <div class="categoy-rank flex justify-between items-center px-3">
+                        <button class="rounded-full text-sm bg-[#4f39f620] px-3 py-1">Men's Clothing</button>
+                        <div class="flex gap-1">
+                            <p><span>* 3.9</span></p>
+                            <p>(120)</p>
+                        </div>
+                    </div>
+                    <div class="title-price px-3">
+                        <h2 class="text-base text-wrap">Mens Casual Premium Slim Fit T-Shirts</h2>
+                        <h2 class="text-xl font-bold">Price</h2>
+                    </div>
+                    <div class="details-add flex justify-between px-3 pb-4 gap-3">
+                        <button class="flex-1 border border-gray-200 font-medium rounded-md py-2"><i
+                                class="fa-solid fa-eye mx-2"></i>Details</button>
+                        <button
+                            class="flex-1 border border-gray-200 bg-[#4f39f6] text-white font-medium rounded-md py-2"><i
+                                class="fa-solid fa-cart-shopping mx-2"></i>Add</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer | Newsletter & Footer -->
+    <footer class="bg-[#1d2838]">
+
+        <div class="w-10/12 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-10">
+
+                <!-- 01: Logo & Info -->
+                <div class="md:pr-7">
+                    <h2 class="text-2xl font-semibold text-blue-400 pb-4">SwiftCart</h2>
+                    <p class="text-gray-400 text-sm pb-7">Your one-stop soluition for all your fashion and lifestyle
+                        needs.
+                        Quality products, fast delivery, and excellent support</p>
+                </div>
+
+
+                <!-- 02: Quick Links -->
+                <div class="pb-7">
+                    <h2 class="text-gray-300 font-semibold pb-4">QUICK LINKS</h2>
+                    <button class="text-gray-300 text-base w-full text-left">Home</button>
+                    <button class="text-gray-300 text-base w-full text-left">Products</button>
+                    <button class="text-gray-300 text-base w-full text-left">About</button>
+                    <button class="text-gray-300 text-base w-full text-left">Contact</button>
+                </div>
+
+
+                <!-- 03: Support -->
+                <div class="pb-7">
+                    <h2 class="text-gray-300 font-semibold pb-4">SUPPORT</h2>
+                    <button class="text-gray-300 text-base w-full text-left">FAQ</button>
+                    <button class="text-gray-300 text-base w-full text-left">Shipping</button>
+                    <button class="text-gray-300 text-base w-full text-left">Returns</button>
+                    <button class="text-gray-300 text-base w-full text-left">Privacy Policy</button>
+                </div>
+
+
+                <!-- 04: Newsletter -->
+                <div>
+                    <h2 class="text-gray-300 font-semibold pb-4">
+                        SUBSCRIBE TO OUR NEWSLETTER
+                    </h2>
+
+                    <p class="text-gray-400 text-sm">
+                        The latest news, articles, and resources, sent to your inbox weekly.
+                    </p>
+
+                    <div class="pt-4 flex flex-col md:flex-row gap-2">
+                        <label class="input w-full md:flex-1">
+                            <input type="email" placeholder="mail@site.com" required />
+                        </label>
+
+                        <button class="btn btn-primary w-full md:w-auto">
+                            Subscribe
+                        </button>
+                    </div>
+
+                    <div class="validator-hint hidden">
+                        Enter valid email address
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-10/12 mx-auto border-t border-gray-700 pb-10"></div>
+
+        <div class="w-10/12 mx-auto flex">
+            <div class="flex-1">
+                <p class="text-sm text-gray-400">© 2025 SwiftCart, Inc. - All right reserved.</p>
+            </div>
+            <div class="space-x-2 pb-10">
+                <button><i class="fa-brands fa-facebook-f text-gray-400"></i></button>
+                <button><i class="fa-brands fa-twitter text-gray-400"></i></button>
+                <button><i class="fa-brands fa-instagram text-gray-400"></i></button>
+                <button><i class="fa-brands fa-linkedin-in text-gray-400"></i></button>
+                <button><i class="fa-solid fa-envelope text-gray-400"></i></button>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
 
 </body>
 
